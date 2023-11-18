@@ -1,13 +1,21 @@
 # Cell Cycle Image Analysis
-This repository contains two pipelines that can be used in association with a dedicated statistical analysis to profile the cell cycle phases in timelapses experiments. In our experiments cells were expressing the FUCCI(CA)2 technology. The analysis is divided into the following two step:
 
-- Image processing <br> 
-   The images are pre-processed through a custom-made Fiji macro in order to transform the original images into a dataset optimized for the subsequent steps of tracking and cell cycle phase assignment. In particular the pipeline generates, from the original acquired multichannel image, a final image stack with the add of a channel that will be used as tracking reference and a channel that will be used for the subsequent cell cycle profiling.
+## Introduction
+
+This repository contains two pipelines that can be used in association with a dedicated statistical analysis to profile the cell cycle phases of cells expressing the FUCCI(CA)2 technology. 
+In our dataset, time-lapse images were composed by Red and Green channels, detecting respectively the mCherry and mVenus markers of the FUCCI(CA)2 indicator. During the experiment each cell alternatively switches between the expression of these two markers as it goes through the different cell cycle phases, causing the lack of a single fluorescence channel suitable for tracking. Furthermore, the automatic profiling of cell-cycle phases becomes cumbersome when dealing with two distinct channels that in the end give rise to two independent fluorescence time-series.
+
+## Analysis description
+
+The analysis is divided into the following two step:
+
+- Image processing <br>
+   The images are pre-processed through a custom-made Fiji (Schindelin et al., 2012) macro in order to transform the original images into a dataset optimized for the subsequent steps of tracking and cell cycle phase assignment. The color changes that occurs during the cell cycle are represented with the Hue scale, as described in (Graduate School of Information Science and Technology, Osaka University, Suita, Osaka, Japan et al., 2020) while the Brightness channel was kept as tracking reference. These two are merged to the Red and Green fluorescence channels to form the final stack used for the tracking process.
+
 - Tracking Analysis <br>
    In the tracking analysis, the Fiji plugin TrackMate (Tinevez et al., 2017) was employed, adapting the example script available on the dedicated TrackMate website (https://imagej.net/plugins/trackmate/scripting/scripting), to ensure the automation of the tracking step. The related parameters were selected and tuned according to each experiment, as well as the proper filters to discard unreliable tracks
 
-
-# Usage
+## Usage
 
 **Image processing**
 
