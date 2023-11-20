@@ -17,6 +17,8 @@ The analysis is divided into the following two step:
 
 ## Usage
 
+*A test image dataset can be provided upon request, writing to the e-mail: chiara.soriani@ieo.it*
+
 **Image processing**
 
 1)	Open the pre-processing macro (Image_processing_HSB_v1.ijm) in your Fiji <br>
