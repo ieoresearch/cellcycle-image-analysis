@@ -37,3 +37,4 @@ Note: the execution of the macro requires the prior installation of the Basic pl
 3)	Run the script from the Fiji script editor
 4)	Set in the dialog window the input directory (where the images processed with the previous pipeline are stored) and the output directory (where you want to store the results table)
 
+To set the tracking parameters, please refer to the guidelines contained into the Documentation and tutorial section of the TrackMate web page (https://imagej.net/plugins/trackmate/)
