@@ -47,7 +47,7 @@ In the example here below, it is shown an image of a field of view in hue scale 
 
 ![BG_subtraction_example](https://github.com/ieoresearch/cellcycle-image-analysis/assets/86475646/ef74a51f-4d8c-4fae-9dc2-3fe53102d058)
 
-3)	Choose the maximum values of the Brightness and Contrast for both red and green channels and set the found values at lines 116 (red) and 118 (green)<br>
+3)	Choose the maximum values of the Brightness and Contrast for both red and green channels and set the found values at lines 116 (red) and 118 (green). <br>
 
 **Hue Saturation Brightness (HSB) Conversion**: to convert original images to the HSB stack, it is essential to include a step for histogram stretching. This contrast enhancement is particularly important for images with a low signal-to-noise ratio, as it ensures a proper range of values in the Brightness scale images, that are used as tracking reference (first image below, left image: Red rescaled between 0 and 3500, Green rescaled between 0 and 4000; right image: whole intensity range). Note that, if the green and red channels are acquired with similar intensity ranges, the Hue image is correctly extracted even if the image histogram is not rescaled, as shown in the second image below (left image: Red rescaled between 0 and 3500, Green rescaled between 0 and 4000; right image: whole intensity range).<br>
 
@@ -58,6 +58,8 @@ Brightness image
 
 Hue scale image
 ![Hue_example](https://github.com/ieoresearch/cellcycle-image-analysis/assets/86475646/ed5929d2-a009-4ace-9e81-668f324fb2da)
+
+*NB!* If the original images are not acquired with a 16-bit camera range, change the commands at lines 128 and 132, indicating the correct camera bit-depth used for the experiment's acquisition
 
 
 4)	Set the proper value of the Top Hat filter on the Brightness channel (HSB stack) at line 127 <br>
