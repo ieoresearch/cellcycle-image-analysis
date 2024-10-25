@@ -5,6 +5,8 @@
 This repository contains two pipelines that can be used in association with a dedicated statistical analysis to profile the cell cycle phases of cells expressing the FUCCI(CA)2 technology. 
 In our dataset, time-lapse images were composed by Red and Green channels, detecting respectively the mCherry and mVenus markers of the FUCCI(CA)2 indicator. During the experiment each cell alternatively switches between the expression of these two markers as it goes through the different cell cycle phases, causing the lack of a single fluorescence channel suitable for tracking. Furthermore, the automatic profiling of cell-cycle phases becomes cumbersome when dealing with two distinct channels that in the end give rise to two independent fluorescence time-series.
 
+The descripted analysis can be found in the related publication: **Automated workflow for the cell cycle analysis of (non-)adherent cells using a machine learning approach**, by K. Hayatigolkhatmi, C.Soriani, E.Soda, E.Ceccacci, O.E.Menna, S.Peri, I.Negrelli, G.Bertolini, G.M.Franchi, S.Rodighiero. (https://elifesciences.org/reviewed-preprints/94689)
+
 ## Analysis description
 
 The analysis is divided into the following two step:
