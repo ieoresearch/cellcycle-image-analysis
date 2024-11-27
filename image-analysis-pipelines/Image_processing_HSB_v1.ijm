@@ -47,7 +47,7 @@ function processFile(input, output, file, ch_green, ch_red) {
 		
 		//--BASIC PROCESSING OF ORIGINAL FLUORESCENCE CHANNELS
 		
-		//--the Z-projection depends on the imaging settings (if the timelaspe doesn't have multiple planes, comment lines 36 and 38)
+		//--the Z-projection depends on the imaging settings (if necessary comment/uncomment the following lines)
 		//run("Z Project...", "projection=[Max Intensity] all");
 		//selectWindow(title);
 		//close();
